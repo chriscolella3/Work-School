@@ -10,8 +10,8 @@
 
     <h1>Red Hawk Hotel Reservation Form</h1>
 
-        <form>
-          <table border="0">
+    <form>
+        <table border="0">
 
           <tr>
             <td>First Name:</td>
@@ -102,22 +102,22 @@
 
           <tr>
             <td>Check-in Date:</td>
-            <td ><input type="date" id="Check-in" size="20"></td>
+            <td ><input type="date" size="20"></td>
           </tr>
 
           <tr>
             <td>Check-out Date:</td>
-            <td ><input type="date" id="Check-out" size="20"></td>
+            <td ><input type="date" size="20"></td>
           </tr>
 
           <tr>
             <td>Phone:</td>
-            <td ><input type="tel" id="telephone" placeholder="(###) ###-####" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="12" size="20"> (###) ###-####</td>
+            <td ><input type="tel" placeholder="(###) ###-####" pattern ="\(\d{3}\) +\d{3}-\d{4}" maxlength="14" size="20"> (###) ###-####</td>
           </tr>
 
           <tr>
             <td>E-mail Address:</td>
-            <td><input type="email" id="email" placeholder="name@domain.com" size="20"></td>
+            <td><input type="email" placeholder="name@domain.com" size="20"></td>
           </tr>
 
           <tr>
@@ -137,12 +137,11 @@
             <td ><input id="Card" size="20"></td>
           </tr>
 
+        </table>
 
-          </table>
+        <input type="submit" value="Reserve">
+        <input type ="reset" value ="Clear">
 
-    <input type="submit" value="Reserve">
-    <input type ="reset" value ="Clear">
-</form>
-
+      </form>
   </body>
 </html>
