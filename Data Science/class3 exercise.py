@@ -8,7 +8,7 @@ else:
 
 #print (letter_count)
 # len(value) returns length of string
-strings = ['a', 'as', 'ba', 'chicken']
+strings = ['a', 'as', 'ba', 'hello', 'test']
 
 print([i.upper() for i in strings if len(i) > 2])
 
