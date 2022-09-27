@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Written by Chris Colella 9/24/2022 -->
+    <!--Hw1, Example 3-->
+    <meta charset="UTF-8">
+    <title>Ex3</title>
+
+    <style>
+      ol.a {list-style-type: lower-roman;}
+      ol.b {list-style-type: upper-roman;}
+      ol.c {list-style-type: lower-alpha;}
+      ol.d {list-style-type: upper-alpha;}
+      ul.e {list-style-type: disc;}
+      ul.f {list-style-type: decimal;}
+    </style>
+    <!--All the different bullet point styles-->
+  </head>
+
+  <body>
+      <main>
+        <h1><p style="color:blue;">Aircraft Types</p></h1>
+      </main>
+  
+      <ul class ="e">
+          <li>General Aviation (piston-driven engines)</li>
+
+          <ul class ="f">
+            <li>Single-Engine Aircraft</li>
+
+            <ol type ="I">
+              <li>Tail wheel</li>
+              <li>Tricycle</li>
+            </ol>
+            
+            <br>
+            <li>Dual-Engine Aircraft</li>
+
+            <ol class ="d">
+              <li>Wing-mounted engines</li>
+              <li>Push-pull fuselage-mounted engines</li>
+            </ol>
+          </ul> <!--(Single engine aircraft)-->
+        </ul> <!--(General Aviation)-->
+
+        <ul class ="e">
+          <br>
+          <li>Commercial Aviation (jet engines)</li>
+
+          <ul class ="f">
+            <li>Dual-Engine</li>
+              <ol class ="c">
+                <li>Wing-mounted engines</li>
+                <li>Fuselage-mounted engines</li>
+              </ol>
+
+              <br>
+              <li>Tri-Engine</li>
+  
+              <ol class="a">
+                <li>Third engine in vertical stabilizer</li>
+                <li>Third engine in fuselage</li>
+              </ol>
+          </ul> <!--Dual engine ul tag-->
+        </ul> <!--(Commercial Aviation)-->
+    </body>
+</html>
