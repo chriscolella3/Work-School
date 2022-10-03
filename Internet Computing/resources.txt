@@ -4,3 +4,4 @@ https://www.w3schools.com/tags/tag_section.asp
 inline style
 jigsaw.w3.org/css-validator
 tool to verift CSS code
+img:hover
