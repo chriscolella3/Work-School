@@ -49,3 +49,24 @@ def answer_three():
     return (boy_names)
 
 answer_three()
+
+# You should write your answer within the function provided.
+# should return an integer
+def answer_four(name,gender):
+    
+    given_number = []
+    
+    for i in range(len(baby_list)):
+
+        if name == baby_list[i][0] and gender == baby_list[i][1]:
+            given_number.append(baby_list[i][2])
+            
+                        
+            return (given_number)
+
+# Test code for Question 4
+# !!! Don't modify this cell !!!
+names = ["Emmy","Abc","Allen","Allen","Jacob"]
+genders = ["F","F","M","F","M"]
+for i in range (0, len(names)):
+    print ("Name:",names[i],"Gender:",genders[i],"Number:",answer_four(names[i],genders[i]))
