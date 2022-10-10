@@ -9,3 +9,7 @@ data = {"Gold": [64, 224, 213, 264, 1002],
 df = pd.DataFrame(data, index = ['Canada', 'China', 'France', 'Great Britain', 'United States'])
 df
 
+df['Gold'].idxmax()
+
+df['Total'] = df.sum(axis='columns')
+df
