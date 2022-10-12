@@ -1,0 +1,30 @@
+/* Written by Chris Colella
+   10/11/2022 */
+
+.LastName:hover{
+    background-color: cyan;
+    color: red;
+    width: 250px;
+    font-size: large;
+}
+
+.LastName:focus{
+    background-color: yellow !important;
+    color: blue;
+    width: 250px;
+    font-size: large;
+}
+
+.FirstName:hover{
+    background-color: cyan;
+    color: red;
+    width: 250px;
+    font-size: large;
+}
+
+.FirstName:focus{
+    background-color: yellow !important;
+    color: blue;
+    width: 250px;
+    font-size: large;
+}
