@@ -1,0 +1,43 @@
+/* Written by Chris Colella
+   10/11/2022 */
+
+@media print {
+
+    body{
+      background-color: #fff;
+    }
+
+    a:link {
+        color: white;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+    a:visited {
+        color: black !important;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      img {
+        display: none;
+      }
+
+      h1 {
+        color: black !important;
+      }
+
+      center{
+        color: black !important;
+      }
+}
+
+center{
+  color: white;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
