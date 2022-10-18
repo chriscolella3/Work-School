@@ -1,0 +1,26 @@
+#include <linux/module.h>
+#include <linux/jiffies.h>
+#include <linux/kernel.h>
+#include <linux/proc_fs.h>
+#include <linux/seq_file.h>
+
+static int jiffies_proc(struct seq_file  *m, void *v{
+	seq_printf(m, "Jiffies = %llu\n", get_jiffies_64());
+	return 0;
+}
+
+static int __init jiffies_init(void){
+	proc_create_single("jiffies", 0, NULL, jiffies_proc)
+	return 0;
+}
+
+static void __exit jiffies_exit(void){
+	remove_proce_entry("jiffies", NULL);
+}
+
+module_init( jiffies_init );
+module_exit( jiffies_exit );
+
+MODULE_LICENSE("GPL");
+MODULE_DESCRIPTION("Jiffies Module");
+MODULE_AUTHOR("ChrisColella");
