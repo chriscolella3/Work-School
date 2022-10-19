@@ -1,0 +1,28 @@
+#include <linux/module.h>
+#include <linux/jiffies.h>
+#include <linux/kernel.h>
+#include <linux/proc_fs.h>
+#include <linux/seq_file.h>
+
+static int seconds_proc(struct seq_file  *m, void *v{
+	int jiffies = get_jiffies_64();
+	int seconds_passed = jiffies / 100;
+	seq_printf(m, "Seconds Elapsed: = %d\n", seconds_passed);
+	return 0;
+}
+
+static int __init seconds_init(void){
+	proc_create_single("seconds", 0, NULL, seconds_proc)
+	return 0;
+}
+
+static void __exit seconds_exit(void){
+	remove_proce_entry("seconds", NULL);
+}
+
+module_init(seconds_init);
+module_exit(seconds_exit);
+
+MODULE_LICENSE("GPL");
+MODULE_DESCRIPTION("Seconds Module");
+MODULE_AUTHOR("Chris_Colella");

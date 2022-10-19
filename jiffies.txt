@@ -18,9 +18,9 @@ static void __exit jiffies_exit(void){
 	remove_proce_entry("jiffies", NULL);
 }
 
-module_init( jiffies_init );
-module_exit( jiffies_exit );
+module_init(jiffies_init);
+module_exit(jiffies_exit);
 
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Jiffies Module");
-MODULE_AUTHOR("ChrisColella");
+MODULE_AUTHOR("Chris_Colella");
