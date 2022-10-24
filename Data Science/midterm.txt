@@ -1,0 +1,7 @@
+intro to data science
+python language basics
+built in data structures: tuple, list, set , dict
+numpy basics
+pandas basics
+data loading
+sample questions (class questions)
