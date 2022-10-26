@@ -5,7 +5,6 @@ $incomingnewpassword = $_POST['newPswd'];
 $incomingnewusername = $_POST['newUserName'];
 $duration = $_POST['membership'];
 
-
 if ($duration == '6'){
     $duration = 25*6;
 } elseif ($duration == '24') {
@@ -23,8 +22,6 @@ echo ' months.';
 echo  nl2br ("\nThe total charge of your membership is $");
 echo $duration;
 echo '.';
-
-
 
 
 ?>
