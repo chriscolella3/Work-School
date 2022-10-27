@@ -3,8 +3,12 @@
   <head>
     <!-- Written by Chris Colella 10/30/2022 -->
     <meta charset="UTF-8">
-    <title>Homework 2</title>
+    <title>Homework 3</title>
+    
+    <!--Getting the reponsive bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+           
+    <!--Responsible for "passwords do not match" erorr-->
     <script src="/scripts/snippet-javascript-console.min.js?v=1"></script>
 
   </head>
@@ -15,14 +19,15 @@
     <div class="container">
         <form class="form-horizontal" action="register.php" method="post" 
         oninput='confirmnewPswd.setCustomValidity(confirmnewPswd.value != newPswd.value ? "Passwords do not match." : "")'>
-
+          <!--oninput is responsible to comparing both passwords to check if they match
+          if they do not match, it will then output "Passwords do not match"-->
+        
           <div class="form-group">
              <label class="control-label col-sm-2" for="user_name">User Name:</label>
 
            <!--Username field-->
             <div class="col-sm-10">
-             <input type="text" class="form-control" id="user_name" 
-                 placeholder="Enter User Name" name="newUserName">
+             <input type="text" class="form-control" id="user_name" placeholder="Enter User Name" name="newUserName" required>
             </div>
           </div>
 
@@ -30,7 +35,7 @@
           <div class="form-group">
              <label class="control-label col-sm-2" for="pwd">Password:</label>
             <div class="col-sm-10">
-             <input type="password" class="form-control" id="password" placeholder="Enter password" name="newPswd">
+             <input type="password" class="form-control" id="password" placeholder="Enter password" name="newPswd" required>
             </div>
           </div>
 
@@ -38,7 +43,7 @@
           <div class="form-group">
              <label class="control-label col-sm-2" for="pwd">Confirm Password:</label>
             <div class="col-sm-10">
-             <input type="password" class="form-control" id="confirmPassword" placeholder="Enter password" name="confirmnewPswd">
+             <input type="password" class="form-control" id="confirmPassword" placeholder="Enter password" name="confirmnewPswd" required>
             </div>
           </div>
 
@@ -46,10 +51,7 @@
           <div class="form-group">
              <label class="control-label col-sm-2" for="pwd">Duration</label>
             <div class="col-sm-10">
-                <select class = "form-control" name="membership" id="duration">
-                    <option value="6">6</option>
-                    <option value="24">24</option>
-                  </select>
+                  <input type="text" class="form-control" id="duration" name="membership" value="6">
                   <p>months</p>
 
             </div>
@@ -63,7 +65,7 @@
          </div>   
 
         </form>
-
+        <!--Responsible for "passwords do not match" erorr-->
         <script type="text/javascript">
         
         </script>

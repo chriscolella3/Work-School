@@ -5,11 +5,7 @@ $incomingnewpassword = $_POST['newPswd'];
 $incomingnewusername = $_POST['newUserName'];
 $duration = $_POST['membership'];
 
-if ($duration == '6'){
-    $duration = 25*6;
-} elseif ($duration == '24') {
-    $duration = 25*24;
-}
+$duration = $duration * 25;
 
 echo 'Welcome ';
 echo $_POST['newUserName'];
