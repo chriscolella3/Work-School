@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Written by Chris Colella 10/30/2022 -->
+    <meta charset="UTF-8">
+    <title>Homework 3</title>
+    
+    <!--Getting the responsive bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+           
+    <!--Responsible for "passwords do not match" erorr-->
+    <script src="/scripts/snippet-javascript-console.min.js?v=1"></script>
+
+  </head>
+  <body>
+
+    <center><h1>Welcome to CSIT Register Page</h1></center>
+    <!-- I'm implmenting the responsive bootstrap given to us on Canvas-->
+    <div class="container">
+        <form class="form-horizontal" action="chriscolella-register.php" method="post" 
+        oninput='confirmnewPswd.setCustomValidity(confirmnewPswd.value != newPswd.value ? "Passwords do not match." : "")'>
+          <!--oninput is responsible to comparing both passwords to check if they match
+          if they do not match, it will then output "Passwords do not match"-->
+        
+          <div class="form-group">
+             <label class="control-label col-sm-2" for="user_name">User Name:</label>
+
+           <!--Username field-->
+            <div class="col-sm-10">
+             <input type="text" class="form-control" id="user_name" placeholder="Enter User Name" name="newUserName" required>
+            </div>
+          </div>
+
+            <!--Password field-->
+          <div class="form-group">
+             <label class="control-label col-sm-2" for="pwd">Password:</label>
+            <div class="col-sm-10">
+             <input type="password" class="form-control" id="password" placeholder="Enter password" name="newPswd" required>
+            </div>
+          </div>
+
+            <!--Confirm Password field-->
+          <div class="form-group">
+             <label class="control-label col-sm-2" for="pwd">Confirm Password:</label>
+            <div class="col-sm-10">
+             <input type="password" class="form-control" id="confirmPassword" placeholder="Enter password" name="confirmnewPswd" required>
+            </div>
+          </div>
+
+            <!--Duration field-->
+          <div class="form-group">
+             <label class="control-label col-sm-2" for="pwd">Duration</label>
+            <div class="col-sm-10">
+                  <input type="text" class="form-control" id="duration" name="membership" value="6">
+                  <p>months</p>
+
+            </div>
+          </div>
+      
+            <!--Login button-->
+          <div class="form-group">
+           <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">RegisterMe</button>
+           </div>
+         </div>   
+
+        </form>
+        <!--Responsible for "passwords do not match" erorr-->
+        <script type="text/javascript">
+        
+        </script>
+
+      </div>
+
+  </body>
+</html>
