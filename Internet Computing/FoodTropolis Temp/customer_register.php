@@ -2,23 +2,13 @@
 // Written by Chris Colella
 // Database Systems
 // May 10 2022
-$DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'root';
-$DATABASE_PASS = '';
-$DATABASE_NAME = 'ecommerce_website';
+$dsn = "mysql:host=localhost;dbname=foodTropolisDatabase"; 
+$conn = new PDO ($dsn, "foodTropolisAdmin", "foodTropolis"); 
 
-// Try and connect using the info above
-$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-if (mysqli_connect_errno()) {
-    
-	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
-}
 
 $password = $_POST['password'];
 $username = $_POST['username'];
 $usertype = "customer";
-$masterpassword = $_POST['masterpasscheck'];
-$masterpass = "12345montclair";
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 // Make sure the submitted registration values are not empty
@@ -38,28 +28,19 @@ if (preg_match('/^[a-zA-Z0-9]+$/', $password) == 0) {
     exit('Password is not valid!');
 }
 
-
-
-// Check if username exists
-if ($stmt = $conn->prepare('SELECT password FROM users WHERE username = ?')) {
-    
-	$stmt->bindValue('s', $username);
-	$stmt->execute();
-	$stmt->store_result();
-	// Store the result to check if account is in the datbase
-	if ($stmt->num_rows > 0) {
-		// Username already exists
-		echo 'Username exists, please choose a different username!';
-	} else {
-// Username is not taken, insert the new account
-if ($sql = "INSERT INTO users (username, password, usertype) VALUES (?,?,?)";
-$conn->prepare($sql)->execute([$username, $hashed_password, $usertype]);) {
+$sql = $conn->prepare('SELECT password FROM users WHERE username = ?');
+$sql->execute([$username]);
+$result = $sql->rowCount();
+if($result > 0){
+	echo 'Username exists, please choose a different username!';
+} else{
+$sql = "INSERT INTO users (username, password, usertype) VALUES (?,?,?)";
+$conn->prepare($sql)->execute([$username, $hashed_password, $usertype]); {
 
 header('Location: FoodTropolis_login.html');
-
-         }
-    }
+	}
 }
+
 $conn->close();
 
 // https://stackoverflow.com/questions/23305300/check-if-username-exists-pdo
