@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- 
+Written by Chris Colella
+Internet Computing
+Hw 5 Extra Credit
+12/20/2022
+Ex1
+-->
+<p id="demo"></p>
+<p id="demoMul"></p>
+
+
+<script>
+
+
+let firstNumber = window.prompt("Enter the first number.")    
+let secondNumber = window.prompt("Enter the second number.")    
+let thirdNumber = window.prompt("Enter the third number.")    
+
+var result = parseInt(firstNumber)+parseInt(secondNumber)+parseInt(thirdNumber);
+
+var resultMul = parseInt(firstNumber) * parseInt(secondNumber) * parseInt(thirdNumber);
+
+document.getElementById("demo").style.fontSize = "x-large";
+document.getElementById("demo").innerHTML = firstNumber + " +" + secondNumber + " +" + thirdNumber + " = " + result;
+
+document.getElementById("demoMul").style.fontSize = "x-large";
+document.getElementById("demoMul").innerHTML = firstNumber + " *" + secondNumber + " *" + thirdNumber + " = " + resultMul;
+
+</script>
+
+</body>
+</html> 

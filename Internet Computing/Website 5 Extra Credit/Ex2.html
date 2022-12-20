@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- 
+Written by Chris Colella
+Internet Computing
+Hw 5 Extra Credit
+12/20/2022
+Ex2
+-->
+
+<script>
+
+let userTableBorder = window.prompt("Please select a sizr for table border \n 3 (3 pixel border)\n 5 (5 pixel border)\n 7 (7 pixel border)\n 9 (9 pixel border)")   
+
+switch (userTableBorder) {
+  case "3":
+    border = "<table style=width:13% border=3px>";
+    break;
+  case "5":
+  border = "<table style=width:13% border=5px>";
+    break;
+  case "7":
+  border = "<table style=width:13% border=7px>";
+    break;
+  case "9":
+  border = "<table style=width:13% border=9px>";
+    break;
+  default:
+  border = "<table style=width:13% border=0>";
+  break;
+}
+
+document.writeln(border)
+</script>
+
+<caption>Northern New Jersey Profit</caption>
+    <tr>
+      <td></td>
+      <td>April</td>
+      <td>May</td>
+      <td>June</td>
+    </tr>
+    <tr>
+      <td>Montclair</td>
+      <td>100</td>
+      <td>80</td>
+      <td>90</td>
+  </tr>
+      <tr>
+      <td>Clifton</td>
+      <td>79</td>
+      <td>80</td>
+         <td>100</td>
+    </tr>
+      <tr>
+      <td>Newark</td>
+      <td>100</td>
+      <td>95</td>
+      <td>91</td>
+    </tr>
+  </table>
+
+<b><h1>Press reload or refresh to run this script again!</h1></b>
+
+</body>
+</html> 
