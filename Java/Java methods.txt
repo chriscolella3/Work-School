@@ -1,0 +1,9 @@
+.startsWith() Find out if the string starts with the specified characters.
+
+.chatAt(position in string) Return the first character (0) of a string:
+
+.equals() Compare strings to find out if they are equal.
+
+.size() Returns the number of elements in this list. 
+
+.isEmpty() Returns true if this list contains no elements.
