@@ -7,3 +7,9 @@
 .size() Returns the number of elements in this list. 
 
 .isEmpty() Returns true if this list contains no elements.
+
+WordUtils.capitalize() capitalize all delimiter-separated words in a string.
+
+.trim() removes all leading and trailing whitespace from a string.
+
+.split() breaks a given string around matches of the given regular expression.
